@@ -1,0 +1,18 @@
+<h1>Topics</h1>
+
+<p *ngIf="!topics"><em>Loading...</em></p>
+
+<table class='table' *ngIf="topics">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let topic of topics">
+            <td>{{ topic.name }}</td>
+            <td>{{ topic.type }}</td>
+        </tr>
+    </tbody>
+</table>
